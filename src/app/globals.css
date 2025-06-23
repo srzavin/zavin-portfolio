@@ -1,4 +1,8 @@
 @import "tailwindcss";
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -6,12 +10,16 @@
 }
 
 @theme inline {
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
+}
+@theme {
+  --color-pupel-purple: #6A4C93;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ededed;
@@ -19,7 +27,19 @@
   }
 }
 
+@layer base {
+  :root {
+    --primary: #6A4C93;  /* Primary color */
+    --secondary: #1E2A47; /* Secondary color */
+    --accent: #F9A826;    /* Accent color */
+  }
 
+  /* Optional: Dark Mode Colors */
+  .dark {
+    --primary: #F9A826;  /* Change primary color for dark mode */
+    --secondary: #4E00FF; /* Dark mode secondary */
+  }
+}
 .glass-button {
   @apply rounded-xl backdrop-blur-none  
          text-black dark:text-white transition

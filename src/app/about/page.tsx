@@ -22,7 +22,7 @@ export default function AboutPage() {
     width={500}
     height={500}
     style={{ transform: 'scaleX(-1)' }}
-    className="rounded-xl  shadow-md"
+    className="rounded-xl bg-primary shadow-md"
   />
 
   {/* Right: Text */}
@@ -33,7 +33,7 @@ export default function AboutPage() {
   Zavin 👋
 </h2>
 
-    <p className="text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
+    <p className="text-lg text-primary dark:text-primary leading-relaxed">
       I’m a curious engineer who enjoys building cool, useful things. Whether it’s Android apps,
       UVM testbenches, or weekend soldering projects — I love solving real problems with a creative mindset.
     </p>
