@@ -1,7 +1,5 @@
-// src/app/about/layout.tsx
-
-import { ReactNode } from "react";
 import PageLayout from "@/components/PageLayout";
+import { ReactNode } from "react";
 
 export default function AboutLayout({
   children,

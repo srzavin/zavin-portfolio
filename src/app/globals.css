@@ -1,7 +1,6 @@
 @import "tailwindcss";
 /* globals.css */
-@tailwind base;
-@tailwind components;
+
 @tailwind utilities;
 
 :root {
@@ -9,17 +8,11 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
-}
-@theme {
+/* @theme {
   --color-pupel-purple: #6A4C93;
-}
+
+} */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ededed;
@@ -27,11 +20,19 @@
   }
 }
 
+@theme inline {
+  --color-primary: var(--primary);
+  --color-txt-colorPrim: var(--primary-txt-color)
+}
+
+
+
 @layer base {
   :root {
     --primary: #6A4C93;  /* Primary color */
     --secondary: #1E2A47; /* Secondary color */
     --accent: #F9A826;    /* Accent color */
+    --primary-txt-color: var(--color-white);
   }
 
   /* Optional: Dark Mode Colors */
@@ -52,7 +53,9 @@
   box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.4),
               inset 0 -4px 6px #693fff36;
 }
-
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
 
 .font-poppins {
   font-family: var(--font-poppins);
@@ -62,7 +65,7 @@
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: #121212;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

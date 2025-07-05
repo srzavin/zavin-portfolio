@@ -1,19 +1,30 @@
 // src/components/PageLayout.tsx
 "use client";  
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; 
+import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function PageLayout({ children }: { children: React.ReactNode }) {
+export default function PageLayout({ children, textColor = "text-gray-700", iconColor = "text-white"  }: { children: React.ReactNode, textColor?: string, iconColor?: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       {/* Top Navigation Bar */}
-      <nav className="font-merriweather text-[18px] font-bold text-gray-700 w-full flex items-center justify-between px-6 py-4 sticky top-0 backdrop-blur z-50 md:flex-nowrap">
-        
+      <nav className="font-merriweather text-[18px] font-bold text-gray-700 w-full flex items-center justify-between px-6 py-4 fixed top-0 left-0 w-full bg-transparent backdrop-blur-xl z-50 md:flex-nowrap">
         {/* Logo (clickable) */}
+                <div
+          className={`flex flex-col md:flex-row md:gap-6 items-center w-full md:w-auto absolute md:static px-10 top-16 md:top-0 left-0 md:bg-transparent transition-all duration-300 eae ${
+            menuOpen ? "left-0" : "left-[-100%]"
+          }`}
+        >
+          <Link href="/" className={`hover:underline font-poppins ${textColor}`}>Home</Link>
+          <Link href="/experience" className={`hover:underline font-poppins ${textColor}`}>Experience</Link>
+          <Link href="/projects" className={`hover:underline font-poppins ${textColor}`}>Projects</Link>
+          <Link href="/skills" className={`hover:underline font-poppins ${textColor}`}>Skills</Link>
+          <Link href="/life" className={`hover:underline font-poppins ${textColor}`}>Life</Link>
+          <Link href="/contact" className={`hover:underline font-poppins ${textColor}`}>Contact</Link>
+        </div>
         <Link href="/">
           <Image
             src="/logo.png"
@@ -26,34 +37,24 @@ export default function PageLayout({ children }: { children: React.ReactNode }) 
 
         {/* Hamburger Icon (mobile only) */}
         <div
-          className="md:hidden cursor-pointer"
+          className="md:hidden cursor-pointer "
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
-            <FaTimes className="text-2xl" />
+            <FaTimes className={`text-2xl ${iconColor}`}/>
           ) : (
-            <FaBars className="text-2xl" />
+            <FaBars className={`text-2xl ${iconColor}`} />
           )}
         </div>
 
-
         {/* Navigation Links */}
-<div
-  className={`flex flex-col md:flex-row md:gap-6 items-center w-full md:w-auto absolute md:static top-16 md:top-0 left-0 bg-white/30 backdrop-blur-xl md:bg-transparent transition-all duration-300 eae  ${
-    menuOpen ? "left-0" : "left-[-100%]"
-  }`}
->
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/experience" className="hover:underline">Experience</Link>
-          <Link href="/projects" className="hover:underline">Projects</Link>
-          <Link href="/skills" className="hover:underline">Skills</Link>
-          <Link href="/life" className="hover:underline">Life</Link>
-          <Link href="/contact" className="hover:underline">Contact</Link>
-        </div>
+
       </nav>
 
       {/* Page Content */}
-      <main className="px-6 py-12">{children}</main>
+      <main className="h-screen"> {/* Add padding to ensure content isn't hidden under the navbar */}
+        {children}
+      </main>
     </>
   );
 }
