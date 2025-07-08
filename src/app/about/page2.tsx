@@ -6,7 +6,7 @@ function Page2() {
   <div className="container max-w-3xl mx-auto flex-col text-left">
     <h3 className="text-3xl font-bold  py-2 mb-2 text-gray-700">⚙️ How I Work</h3>
     <p className="text-2xl font-normal py-2 text-gray-700 ">
-      I'm hands-on, adaptable, and always eager to learn. I enjoy collaborating in fast-paced teams, debugging tough issues, and shipping clean, thoughtful code.
+      I&apos;m hands-on, adaptable, and always eager to learn. I enjoy collaborating in fast-paced teams, debugging tough issues, and shipping clean, thoughtful code.
     </p>
     <h2 className="text-3xl  font-semibold text-gray-700 mb-4">🔭 What I’m Into Right Now</h2>
     <div className="flex flex-wrap gap-2 justify-left">

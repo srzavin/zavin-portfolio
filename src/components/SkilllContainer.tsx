@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 enum SkillCategory {
     Language = 'Language',
     Framework = 'Framework',

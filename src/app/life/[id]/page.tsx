@@ -1,6 +1,7 @@
 import { LifeEvent } from "@/components/LifeEventHolder"; // or recreate the type locally
 import { notFound } from "next/navigation";
 import Link from 'next/link';
+import Image from "next/image";
 export default async function EventPage({ params }: { params: { id: string } }) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/life/${params.id}`, {
     cache: "no-store" // optional: disables caching if needed
@@ -31,7 +32,7 @@ export default async function EventPage({ params }: { params: { id: string } }) 
       {event.photos.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           {event.photos.map((src, i) => (
-            <img key={i} src={src} alt={`Project image ${i}`} className="rounded-lg w-full" />
+            <Image key={i} src={src} alt={`Project image ${i}`} className="rounded-lg w-full" />
           ))}
         </div>
       )}

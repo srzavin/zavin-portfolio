@@ -22,8 +22,8 @@ function Main() {
       </h2>
 
       <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-I'm a Computer Science Engineer with hands-on experience in Android app development, backend systems, and embedded tech.
- I’ve built and deployed real apps, designed secure APIs, and enjoy working across the full stack to create fast, clean, and impactful solutions.
+I&apos;m a Computer Science Engineer with hands-on experience in Android app development, backend systems, and embedded tech.
+ I&apos;ve built and deployed real apps, designed secure APIs, and enjoy working across the full stack to create fast, clean, and impactful solutions.
       </p>
     </div>
   </div>

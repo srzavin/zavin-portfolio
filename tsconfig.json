@@ -23,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/about/page2.jsx", "tailwind.config.js", "src/components/ExpandableSection.js"],
-  "exclude": ["node_modules"]
+  "exclude":  ["node_modules", ".next"]
 }

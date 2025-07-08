@@ -1,4 +1,4 @@
-import { FileUser , BriefcaseBusiness,Presentation, Lightbulb, Link as LinkIcon, Mail, Earth } from "lucide-react";
+import { FileUser , BriefcaseBusiness,Presentation, Lightbulb, Link as  Mail, Earth } from "lucide-react";
 import GlassButton from "@/components/GlassButton";
 import Link from "next/link";
 

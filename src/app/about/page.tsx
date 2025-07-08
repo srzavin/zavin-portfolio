@@ -1,6 +1,6 @@
 "use client";  
 import { useEffect, useState, useRef } from "react";
-import AboutLayout from "./layout"; // Import the layout
+import AboutLayout from "@/components/Layout"; 
 import Main from './main';
 import Page2 from './page2';
 
@@ -13,6 +13,7 @@ export default function AboutPage() {
 
   // Intersection Observer to change the text color based on which section is in view
   useEffect(() => {
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

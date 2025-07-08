@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function PageLayout({ children, textColor = "text-gray-700", iconColor = "text-white", logo='/logo.png'  }: { children: React.ReactNode, textColor?: string, iconColor?: string, logo?: string }) {
+export default function PageLayout({ children, textColor = "text-gray-300", iconColor = "text-gray-300", logo='/logo.png'  }: { children: React.ReactNode, textColor?: string, iconColor?: string, logo?: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
