@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function PageLayout({ children, textColor = "text-gray-700", iconColor = "text-white"  }: { children: React.ReactNode, textColor?: string, iconColor?: string }) {
+export default function PageLayout({ children, textColor = "text-gray-700", iconColor = "text-white", logo='/logo.png'  }: { children: React.ReactNode, textColor?: string, iconColor?: string, logo?: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -18,7 +18,8 @@ export default function PageLayout({ children, textColor = "text-gray-700", icon
             menuOpen ? "left-0" : "left-[-100%]"
           }`}
         >
-          <Link href="/" className={`hover:underline font-poppins ${textColor}`}>Home</Link>
+          <Link href="/" className={`hover:underline font-orbitron ${textColor}`}>Home</Link>
+          <Link href="/about" className={`hover:underline font-poppins ${textColor}`}>About Me</Link>
           <Link href="/experience" className={`hover:underline font-poppins ${textColor}`}>Experience</Link>
           <Link href="/projects" className={`hover:underline font-poppins ${textColor}`}>Projects</Link>
           <Link href="/skills" className={`hover:underline font-poppins ${textColor}`}>Skills</Link>
@@ -27,7 +28,7 @@ export default function PageLayout({ children, textColor = "text-gray-700", icon
         </div>
         <Link href="/">
           <Image
-            src="/logo.png"
+            src={logo}
             alt="Logo"
             width={50}
             height={50}

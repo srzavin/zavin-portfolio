@@ -1,6 +1,6 @@
 import ExperienceSection from "@/components/Experience_container";
 
-export default function AboutPage() {
+export default function ExperiencePage() {
   return (
     <main className="min-h-screen px-6 py-16 max-w-full mx-auto">
       {/* <h1 className="text-4xl font-bold text-amber-300 mb-6 text-left">Experience</h1> */}

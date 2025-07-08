@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autonomous Delivery Robot</title>
+</head>
+<body>
+
+
+  <h2>Overview</h2>
+  <p>
+    This project presents the design and development of an <strong>Autonomous Delivery Robot</strong>, a self-driving, computer-vision-based vehicle designed to solve last-mile delivery challenges. It focuses on creating an efficient, cost-effective robot that can autonomously navigate urban environments using machine learning, real-time object detection, and GPS-based navigation.
+  </p>
+
+  <h2>Objectives</h2>
+  <ul>
+    <li>Improve last-mile delivery with autonomy</li>
+    <li>Integrate AI-based navigation using computer vision</li>
+    <li>Detect lanes, obstacles, and signs using deep learning</li>
+    <li>Ensure secure delivery via NFC authentication</li>
+  </ul>
+
+  <h2>Key Features</h2>
+  <ul>
+    <li>Self-driving robot built on Raspberry Pi and Arduino</li>
+    <li>GPS and GraphHopper API for navigation</li>
+    <li>Camera-based CNN for lane and obstacle detection</li>
+    <li>Uses SSD MobileNet V3 for real-time object recognition</li>
+    <li>Secure OTP-based parcel retrieval via NFC</li>
+  </ul>
+
+  <h2>Technical Specifications</h2>
+  <ul>
+    <li><strong>Chassis:</strong> Steel and aluminum frame with two independent motors</li>
+    <li><strong>Motor Driver:</strong> BTS7960 H-Bridge</li>
+    <li><strong>Power:</strong> 24V lead-acid battery for motors; power bank for Raspberry Pi</li>
+    <li><strong>Sensors:</strong> Sonar (HC-SR04), GPS module</li>
+    <li><strong>Controller:</strong> PS4 DualShock used for data collection</li>
+  </ul>
+
+  <h2>AI & Model Training</h2>
+  <ul>
+    <li>Data collected by driving the robot manually</li>
+    <li>Preprocessed via cropping, YUV colorspace conversion, and augmentation</li>
+    <li>Trained using a 9-layer CNN inspired by NVIDIA’s end-to-end learning model</li>
+    <li>Model predicts steering angle from front camera feed</li>
+  </ul>
+
+  <h2>Algorithms & Modules</h2>
+  <ul>
+    <li><strong>Lane Detection:</strong> Color thresholding, perspective warping, and histogram analysis</li>
+    <li><strong>Object Detection:</strong> SSD MobileNet V3 with OpenCV and COCO dataset</li>
+    <li><strong>Path Planning:</strong> Modified A* algorithm using GraphHopper for dynamic rerouting</li>
+  </ul>
+
+  <h2>Testing & Results</h2>
+  <ul>
+    <li>Vehicle successfully stops for pedestrians using image + sonar detection</li>
+    <li>Follows lanes and corrects course using real-time inference</li>
+    <li>Coordinates and heading retrieved from GPS for turning and stopping decisions</li>
+  </ul>
+
+  <h2>Limitations</h2>
+  <ul>
+    <li>Limited by Raspberry Pi processing power</li>
+    <li>Low-quality sensors introduce some noise</li>
+    <li>Does not perform optimally in unpredictable or extreme environments</li>
+  </ul>
+
+  <h2>Future Improvements</h2>
+  <ul>
+    <li>Upgrade to high-precision sensors and better onboard hardware</li>
+    <li>Train with more diverse and domain-specific datasets</li>
+    <li>Extend functionality with braking and throttle automation</li>
+  </ul>
+  <h2>Links</h2>
+<a text-blue-300 hover:underline font-medium target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1VS6asyUTy7kj64dJEb3I-3bESO9W1loW/view?usp=sharing">Thesis paper</a>
+</body>
+</html>

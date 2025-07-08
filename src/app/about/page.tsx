@@ -7,6 +7,7 @@ import Page2 from './page2';
 export default function AboutPage() {
   const [textColor, setTextColor] = useState("text-gray-300"); // Default color (for Main)
     const [iconColor, setIconColor] = useState("text-gray-300"); // Default color (for Main)
+    const [logo, setlogo] = useState("/logo.png");
   const mainRef = useRef(null); // Reference for the Main section
   const page2Ref = useRef(null); // Reference for the Page2 section
 
@@ -18,10 +19,12 @@ export default function AboutPage() {
           if (entry.target === mainRef.current && entry.isIntersecting) {
             setTextColor("text-gray-300"); // Main section is in view
             setIconColor("text-gray-300");
+            setlogo("/logo.png")
           }
           if (entry.target === page2Ref.current && entry.isIntersecting) {
             setTextColor("text-gray-700"); // Page2 section is in view
             setIconColor("text-gray-700");
+            setlogo("/logo_blk.png");
           }
         });
       },
@@ -39,7 +42,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <AboutLayout textColor={textColor} iconColor={iconColor}> {/* Pass dynamic text color */}
+    <AboutLayout textColor={textColor} iconColor={iconColor} logo={logo}> {/* Pass dynamic text color */}
       <div className="scrollbar-thin snap-y overflow-y-auto snap-mandatory h-full w-full">
         <div
           ref={mainRef}

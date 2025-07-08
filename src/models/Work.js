@@ -4,6 +4,7 @@ const workSchema = new mongoose.Schema(
     {
         name: String,
         position: String,
+        location: String,
         startDate: Date,
         endDate: Date,
         description: String,

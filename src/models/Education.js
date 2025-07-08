@@ -4,6 +4,7 @@ const eduSchema = new mongoose.Schema(
     {
         institution: String,
         degree_name: String,
+        location: String,
         startDate: Date,
         endDate: Date,
         result: String,

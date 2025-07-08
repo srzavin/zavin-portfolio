@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hipaa Checker Project Description</title>
+  </head>
+  <body>
+    
+      <h1>Introduction</h1>
+      <p>In the evolving landscape of tech and health care, safeguarding patient data is of the highest priority.
+HIPAA (Health Insurance Portability and Accountability Act) of 1996 plays a crucial role in ensuring the confidentiality of individuals' health information.
+Enforcement of HIPAA has become more stringent amid evolving challenges, technologies, and digital threats.
+</p>
+<h1>HIPAA Obligations for App Developers:</h1>
+<ul>
+  <li><strong>Covered Entities vs. Business Associates:</strong> App developers may need to comply with HIPAA if they function as business associates working with covered entities (e.g., healthcare providers or insurers).</li>
+
+<li><strong>Access to PHI:</strong> If an app handles protected health information (PHI) on behalf of covered entities, the developer is obligated to comply with HIPAA's privacy and security rules.</li>
+
+<li><strong>Security Measures:</strong> Implementing robust security measures, encryption, and ensuring data integrity become crucial for developers handling PHI.</li>
+</ul>
+<h1>My Contributions</h1>
+<ul>
+  <li>⚙️ <strong>Decompiled Android APKs using JADX</strong>: Implemented a fully automated pipeline to extract Java source code and monitor decompilation progress in real time.</li>
+  <li>📊 <strong>Built live progress tracking system</strong>: Used <code>Open3.popen3</code> with timeout/stall detection logic to track progress and update the database or kill the process safely if needed.</li>
+  <li>🧵 <strong>Introduced concurrency with Sidekiq</strong>: Offloaded long-running extraction jobs into Sidekiq queues (<code>report</code> queue) for scalability and reliability under heavy loads.</li>
+  <li>🛠️ <strong>Refactored architecture</strong>: Moved business logic out of model concerns into dedicated service objects and Sidekiq jobs to follow clean MVC principles.</li>
+  <li>📄 <strong>Implemented rich-text documentation handling</strong>: Leveraged <code>ActionText</code> to store and render markdown-like rich text in suggestions and reports.</li>
+  <li>🔐 <strong>Contributed to secure API development</strong>: Built endpoints to serve structured suggestion data, YAML rule parsing, and dynamic code snippet grouping via JSON APIs.</li>
+  <li>🧪 <strong>Improved error resilience</strong>: Handled <code>JadxOverflowException</code>, timeout errors, and Linux-level process failures with graceful fallbacks and logging.</li>
+  <li>🗂️ <strong>Added custom admin features</strong>: Extended ActiveAdmin panels to manage suggestion rules, resource links, YAML metadata, and progress/status flags.</li>
+</ul>
+<h1>Links:</h1>
+<a  text-blue-300 hover:underline font-medium href="https://www.hipaachecker.health" target="_blank" rel="noopener noreferrer">Visit The HIPAA CHECKER WEBSITE</a> <br>
+<a  text-blue-300 hover:underline font-medium href="https://play.google.com/store/apps/details?id=health.hipaachecker"target="_blank" rel="noopener noreferrer">Visit The HIPAA CHECKER Android Application</a>
+
+<p>No github link due to DNA</p>
+  </body>
+  
+</html>

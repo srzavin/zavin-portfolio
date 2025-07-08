@@ -8,7 +8,9 @@
   --foreground: #171717;
 }
 
-
+@layer utilities {
+  /* Your custom utilities (optional) */
+}
 /* @theme {
   --color-pupel-purple: #6A4C93;
 
@@ -25,7 +27,7 @@
   --color-txt-colorPrim: var(--primary-txt-color)
 }
 
-
+@plugin "@tailwindcss/typography";
 
 @layer base {
   :root {

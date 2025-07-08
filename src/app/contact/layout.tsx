@@ -1,7 +1,18 @@
-export default function AboutLayout({
+import PageLayout from "@/components/PageLayout";
+import { ReactNode } from "react";
+
+export default function ContactLayout({
   children,
+  textColor = "text-gray-300", // Default color if not passed
+   iconColor= "text-gray-300",
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
+  textColor?: string; // Default to white if not passed
+   iconColor?: string
 }) {
-  return <section>{children}</section>;
+  return (
+    <PageLayout textColor={textColor} iconColor={textColor}>
+      {children} {/* Render children with the dynamic text color */}
+    </PageLayout>
+  );
 }

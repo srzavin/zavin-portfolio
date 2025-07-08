@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 
 const projectSchema = new mongoose.Schema(
     {
+        id: { type: String, required: true, unique: true },
         name: String,
         photo: String, 
         description: String,

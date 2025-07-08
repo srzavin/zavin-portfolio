@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Self-Hosted Home Server</title>
+</head>
+<body>
+
+
+  <h2>📦 Overview</h2>
+  <p>
+    This project is a self-contained, fully dockerized home server running on Ubuntu. It powers my media library, personal cloud, finance tracker, retro gaming platform, and also acts as my primary development machine. I can access and control everything from anywhere in the world — securely, reliably, and without relying on third-party services.
+  </p>
+
+  <h2>🧩 Key Features</h2>
+  <ul>
+    <li><strong>🎞️ Media Server:</strong> 
+      <ul>
+        <li><strong>Jellyfin</strong> for watching movies and TV shows</li>
+        <li><strong>Immich</strong> for automatic photo backup and gallery</li>
+        <li><strong>qBitTorrent</strong> for downloading torrents straight through the web ui, and continuous seeding.</li>
+      </ul>
+    </li>
+    <li><strong>☁️ Personal Cloud:</strong> 
+      <ul>
+        <li><strong>Nextcloud</strong> for document storage, calendar sync, and sharing</li>
+      </ul>
+    </li>
+    <li><strong>💰 Finance:</strong> 
+      <ul>
+        <li><strong>Firefly III</strong> for tracking expenses and budgeting</li>
+      </ul>
+    </li>
+    <li><strong>🎮 Retro Gaming:</strong> 
+      <ul>
+        <li><strong>RetroArch Web</strong> to play retro games directly in the browser</li>
+      </ul>
+    </li>
+    <li><strong>🧠 Dashboard UI:</strong> 
+      <ul>
+        <li><strong>CasaOS</strong> as the main control panel for all services</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>🛠 Server Stack</h2>
+  <ul>
+    <li><strong>OS:</strong> Ubuntu</li>
+    <li><strong>Containers:</strong> Everything runs inside Docker</li>
+    <li><strong>Management UI:</strong> Portainer + CasaOS</li>
+    <li><strong>Storage:</strong> Two hard drives combined to serve all data needs</li>
+  </ul>
+
+  <h2>🌐 Remote Access</h2>
+  <ul>
+    <li><strong>Nginx Proxy Manager</strong> for managing subdomains and reverse proxy rules</li>
+    <li><strong>Cloudflare DNS</strong> for custom domain access</li>
+    <li><strong>WireGuard VPN</strong> for secure connection to the home network from anywhere</li>
+  </ul>
+
+  <h2>👨‍💻 Development on the Go</h2>
+  <p>
+    I use this server as my main development machine. All my personal projects, apps, and experiments are stored and run here. I SSH into the server from any device — laptop, tablet, or even phone — and continue coding with ease. Whether it's managing containers, running builds, or editing files, it's all done through my private server environment.
+  </p>
+
+  <h2>🔒 Security</h2>
+  <ul>
+    <li>All services run behind Nginx Proxy Manager with SSL</li>
+    <li>WireGuard ensures private access when remote</li>
+    <li>All apps are isolated in Docker containers</li>
+  </ul>
+
+</body>
+</html>
