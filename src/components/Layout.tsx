@@ -8,14 +8,16 @@ export default function Layout({
   textColor,
   iconColor,
   logo,
+  bgColor,
 }: {
   children: ReactNode;
   textColor: string;
   iconColor: string;
   logo: string;
+  bgColor: string;
 }) {
   return (
-    <PageLayout textColor={textColor} iconColor={iconColor} logo={logo}>
+    <PageLayout textColor={textColor} iconColor={iconColor} logo={logo} bgColor={bgColor}>
       {children}
     </PageLayout>
   );

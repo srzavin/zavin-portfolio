@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function PageLayout({ children, textColor = "text-gray-300", iconColor = "text-gray-300", logo='/logo.png'  }: { children: React.ReactNode, textColor?: string, iconColor?: string, logo?: string }) {
+export default function PageLayout({ children, textColor = "text-gray-300", iconColor = "text-gray-300",bgColor='bg-[#121212]', logo='/logo.png'  }: { children: React.ReactNode, textColor?: string, iconColor?: string, logo?: string, bgColor?: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ export default function PageLayout({ children, textColor = "text-gray-300", icon
       <nav className="font-merriweather text-[18px] font-bold text-gray-700 w-full flex items-center justify-between px-6 py-4 fixed top-0 left-0 w-full bg-transparent backdrop-blur-xl z-50 md:flex-nowrap">
         {/* Logo (clickable) */}
                 <div
-          className={`flex flex-col md:flex-row md:gap-6 items-center w-full md:w-auto absolute md:static px-10 top-16 md:top-0 left-0 md:bg-transparent transition-all duration-300 eae ${
+          className={`flex flex-col md:flex-row md:gap-6 items-left w-full md:w-auto absolute md:static px-10 py-5 top-16 md:top-0 left-0 md:bg-transparent ${bgColor} transition-all duration-300 eae ${
             menuOpen ? "left-0" : "left-[-100%]"
           }`}
         >
